@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    <h1>counter : <span class="counter">0</span></h1>
+    <button id="increment">increment button</button>
+    <button id="decrement">decrement button</button>
+
+    <ul id="list">
+
+    </ul>
+    <script>
+        const incrementBtn = document.querySelector('#increment')
+        const decrementBtn = document.querySelector('#decrement')
+        let counter = 0
+        counterEle = document.querySelector('.counter')
+        let miza = document.getElementById('list')
+
+function incrementCounter(){
+    counter++
+    counterEle.innerText = counter
+
+// create a element
+
+let li = document.createElement('li')
+li.innerHTML = 'safwan.com' + counter
+
+// append that element
+
+miza.appendChild(li)
+
+
+}
+
+function decrementCounter(){
+    counter--
+    counterEle.innerText = counter
+}
+
+    incrementBtn.addEventListener('click', incrementCounter)
+    decrementBtn.addEventListener('click', decrementCounter)
+
+
+    </script>
+</body>
+</html>
